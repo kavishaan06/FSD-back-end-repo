@@ -26,4 +26,7 @@ const UserSchema = new mongoose.Schema({
   }
 });
 
-export default mongoose.model('User', UserSchema);
+// ✅ SAFE EXPORT (prevents OverwriteModelError)
+const User = mongoose.models.User || mongoose.model('User', UserSchema);
+
+export default User;
