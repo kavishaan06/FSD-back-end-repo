@@ -1,0 +1,15 @@
+services:
+  - type: web
+    name: time-access-backend
+    env: node
+    region: singapore # You can change this to ohio, frankfurt, etc.
+    plan: free
+    buildCommand: npm install
+    startCommand: node index.js
+    envVars:
+      - key: MONGO_URI
+        sync: false # This forces you to enter the value in the Render Dashboard
+      - key: JWT_SECRET
+        sync: false
+      - key: PORT
+        value: 5000
