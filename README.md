@@ -3,23 +3,23 @@
 **Assignment ID:** FSD-36 
 **Title:** Time-Based Access Window System
 
-## 📌 Project Overview
+## Project Overview
 This project is a Full Stack application designed to implement a **Time-Based Access Window System**. The objective is to design a system that allows administrators to grant users access to protected resources only within a defined time window.
 
 The system enforces strict time-based validation where access attempts outside the assigned window are rejected. All access data is persisted in a database, ensuring no hardcoded or in-memory logic is used.
 
-## 🚀 Live Deployment Links
+##  Live Deployment Links
 
 * **Frontend Deployment:** Not yet Deployed
 * **Backend Deployment:** 
 
-## 🛠 Tech Stack
+## Tech Stack
 * **Backend:** Node.js, Express.js (v5) 
 * **Database:** MongoDB, Mongoose 
 * **Authentication:** JWT (JSON Web Tokens), bcryptjs
 * **Frontend:** React.js (Vite), Axios
 
-## 👥 User Roles and Permissions
+## User Roles and Permissions
 
 ### 1. ADMIN 
 * **Register & Login:** Secure access to the system.
@@ -32,7 +32,7 @@ The system enforces strict time-based validation where access attempts outside t
 * **Resource Access:** Attempt to access protected resources.
  * **Business Rule:** Access is granted **only** if the current server time is within the assigned window. Attempts outside this window are rejected.
 
-## 🔌 API Endpoints
+##  API Endpoints
 *Key endpoints for the application:*
 
 ### Authentication
@@ -53,7 +53,7 @@ The system enforces strict time-based validation where access attempts outside t
 | `GET` | `/api/resource/status` | View own access window |
 | `GET` | `/api/resource/protected-data` | Access restricted content (Time-validated) |
 
-## 🗄 Database Schema
+##  Database Schema
 The application uses a **User** model to store credentials and access windows.
 
 ```json
